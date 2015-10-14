@@ -9,11 +9,10 @@ def index():
 def hello():
     return 'Hello World'
 
-@app.route('/euler1')
-def euler1():
+@app.route('/euler1/<int:index>')
+def euler1(index):
 
 	total = 0
-	index = 1000
 	
 	while(index > 0):
 	
