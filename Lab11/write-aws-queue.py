@@ -23,15 +23,15 @@ secret_access_key = r1[1]
 # Set up a connection to the AWS service. 
 
 conn = boto.sqs.connect_to_region(
-"eu-west-1",
-aws_access_key_id=access_key_id,
-aws_secret_access_key=secret_access_key
+	"eu-west-1",
+	aws_access_key_id=access_key_id,
+	aws_secret_access_key=secret_access_key
 )
 
 
 # Get a list of the queues that exists and then print the list out
 # Do not use / or " in the name
-q = conn.get_queue("C13765235-%s" % sys.argv[1])
+q = conn.get_queue("D14123580-%s" % sys.argv[1])
 
 m = Message()
 m.set_body(sys.argv[2])
