@@ -37,4 +37,4 @@ m = Message()
 m.set_body(sys.argv[2])
 q.write(m)
 
-print("Message %s written to the queue" % m.get_body())
+print("Message %s has been written to the queue" % m.get_body())

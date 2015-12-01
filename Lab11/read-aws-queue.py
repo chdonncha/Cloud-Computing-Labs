@@ -33,7 +33,7 @@ conn = boto.sqs.connect_to_region(
 # Do not use / or " in the name
 q = conn.get_queue("D14123580-%s" % sys.argv[1])
 
-messages = q.get_messages()
+m = q.get_messages()
 
-for i in range(0, len(messages)):
-	print("Message read = %s" % messages[i].get_body())
+for i in range(0, len(m)):
+	print("Message = %s" % m[i].get_body())
