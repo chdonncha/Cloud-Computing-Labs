@@ -35,10 +35,8 @@ q = conn.get_queue("D14123580-%s" % sys.argv[1])
 
 m = q.get_messages()
 
-for i in range(0, q.count()):
+for i in range(0, len(m)):
+	print("Message read = %s" % m[i].get_body())
+	r = q.delete_message(m)[i]
 
-	m = q.read(60)
-
-	print("Message = %s" % m.get_body())
-
-
+print("message has been deleted")
